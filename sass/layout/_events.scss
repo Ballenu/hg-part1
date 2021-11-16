@@ -1,16 +1,22 @@
 .events {
-    position: static;
-    display: block;
+    position: relative;
     margin: 0 auto;
     width: 100vh;
     height: 50vh;
     text-align: center;
-    background-image: url("../img/play.jpg");
+    background-image: linear-gradient(
+        rgba($white, 0.8),
+        rgba($events-blue, 0.8));
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
     &.events__box {
         position: absolute;
+        display: inline-block;
+        width: 100vh;
+        height: 50vh;
     }
     
 }
+
+
