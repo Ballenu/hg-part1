@@ -1,17 +1,14 @@
-@keyframes imageDisappear {
+@keyframes miniCircle {
     0% {
-        opacity: 100%;
+        clip-path: circle(100%);
     }
 
-    10% {
-        transform: translate(-10%, -10%);
-    }
-
-    20% {
-        transform: translate();
+    50% {
+        clip-path: circle(35%);
     }
 
     100% {
-        opacity: 0%;
+        clip-path: circle(100%);
     }
+    
 }
