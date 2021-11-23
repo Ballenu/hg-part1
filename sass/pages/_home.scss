@@ -1,13 +1,13 @@
 .events {
     position: relative;
     margin: 0 auto;
-    //width: 100vh;
-    //height: 50vh;
+    width: fit-content;
+    height: fit-content;
     text-align: center;
     transition: all .2s;
 
     &__content{
-        visibility: collapse;
+        visibility: hidden;
     }  
 
     &__box {
@@ -66,16 +66,21 @@
                 border-color: $events-btn;
                 color: $white;
             }
-    
-            &--showcontent:checked  .events__content {
-                visibility: visible;
-              }
         }
+
+        &--showcontent:checked ~ .events__content {
+            visibility: visible;
+          }
     }
-    
+
     &__box:hover{
         animation: miniCircle 3s ease-in-out;
     }
 
-     
+    &__content {
+        position: relative;
+        margin: 0 auto;
+        transform: translateY(10rem);
+    }
+    
 }
