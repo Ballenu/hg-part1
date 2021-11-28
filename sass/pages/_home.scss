@@ -6,15 +6,12 @@
     text-align: center;
     transition: all .2s;
 
-    &__content{
-        visibility: hidden;
-    }  
-
-    &__box {
-        position: relative;
+    &--hover{
+        position: absolute;
         margin: 0 auto;
-        width: 100vh;
-        height: 50vh;
+        width: $default-width;
+        height: $default-height;
+
         background-image: linear-gradient(360deg,
         rgba($white, 0.7),
         rgba($events-blue, 0.7)),
@@ -23,64 +20,69 @@
         background-repeat: no-repeat;
         transition: all .2s;
         border-radius: 5rem;
-        clip-path: circle(70%);
+        z-index: 1;
 
-        &--btn { 
-            position: relative;
-            margin: 0 auto;
-            width: fit-content;
-            top: 70%;
-
-            input[type=checkbox] + label {
-                display: block;
-                margin: 0.3em;
-                cursor: pointer;
-                padding: 0.3em;
-            }
-              
-            input[type=checkbox] {
-                display: none;
-            }
-              
-            input[type=checkbox] + label:before {
-                content: "";
-                border: 0.1em solid $black;
-                border-radius: 50em;
-                display: inline-block;
-                width: 6em;
-                height: 6em;
-                padding-left: 0.2em;
-                padding-bottom: 0.3em;
-                margin-right: 0.2em;
-                vertical-align: bottom;
-                color: transparent;
-                transition: .3s;
-            }
-              
-            input[type=checkbox] + label:active:before {
-                transform: scale(0);
-            }
-              
-            input[type=checkbox]:checked + label:before {
-                background-color: $events-btn;
-                border-color: $events-btn;
-                color: $white;
-            }
-        }
-
-        &--showcontent:checked ~ .events__content {
-            visibility: visible;
-          }
-    }
-
-    &__box:hover{
-        animation: miniCircle 3s ease-in-out;
+        &:hover{
+            animation: closingRectangle 3s ease-in-out;
+        } 
     }
 
     &__content {
+        opacity: 0;
+        transition: all 1s;
         position: relative;
         margin: 0 auto;
-        transform: translateY(10rem);
+        transform: translate(-45%, 12rem);
+        width: $default-width;
+
+        &--gaming{
+            margin-bottom: -1.5rem;
+            width: $default-width;
+            height: calc(#{$default-height} / 3);
+            background-image: linear-gradient(to right,
+            rgba($white, 0),
+            rgba($white, 0)),
+            url('../img/gaming.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        &--celebrations{
+            width: $default-width;
+            height: calc(#{$default-height} / 4);
+            background-image: linear-gradient(to right,
+            rgba($events-blue, 0),
+            rgba($white, 0)),
+            url('../img/celebrations.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-clip: 50%;
+        }
+
+        &--wedding{
+            width: $default-width;
+            height: calc(#{$default-height} / 4);
+            background-image: linear-gradient(to right,
+            rgba($events-blue, 0),
+            rgba($white, 0)),
+            url('../img/wedding.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        &--meetings{
+            width: $default-width;
+            height: calc(#{$default-height} / 4);
+            background-image: linear-gradient(to right,
+            rgba($events-blue, 0),
+            rgba($white, 0)),
+            url('../img/meetings.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        &--headings {
+            //position: absolute;
+        }
     }
-    
 }
