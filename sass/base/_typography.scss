@@ -3,3 +3,22 @@ body {
     line-height: 1.7;
     font-family: Century Gothic, sans-serif;
 }
+
+.events__heading {
+    position: absolute;
+    display: inline-block;
+    background-image: linear-gradient(to right,
+    rgba($upgrade-pink, 0.9),
+    rgba($white, 1),
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    transform: translate(-9rem ,-2rem);
+
+    font-size: 1.4rem;
+    letter-spacing: 1.2rem;
+}
