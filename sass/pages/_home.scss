@@ -32,57 +32,53 @@
         transition: all 1s;
         position: relative;
         margin: 0 auto;
-        transform: translate(-45%, 12rem);
+        transform: translate(-55%, 12rem);
         width: $default-width;
 
         &--gaming{
-            margin-bottom: -1.5rem;
-            width: $default-width;
-            height: calc(#{$default-height} / 3);
+            @include events-content-basic;
             background-image: linear-gradient(to right,
-            rgba($white, 0),
-            rgba($white, 0)),
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
             url('../img/gaming.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
         }
 
         &--celebrations{
-            width: $default-width;
-            height: calc(#{$default-height} / 4);
+            @include events-content-basic;
             background-image: linear-gradient(to right,
-            rgba($events-blue, 0),
-            rgba($white, 0)),
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
             url('../img/celebrations.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            background-clip: 50%;
         }
 
         &--wedding{
-            width: $default-width;
-            height: calc(#{$default-height} / 4);
+            @include events-content-basic;
             background-image: linear-gradient(to right,
-            rgba($events-blue, 0),
-            rgba($white, 0)),
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
             url('../img/wedding.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
         }
 
         &--meetings{
-            width: $default-width;
-            height: calc(#{$default-height} / 4);
+            @include events-content-basic;
             background-image: linear-gradient(to right,
-            rgba($events-blue, 0),
-            rgba($white, 0)),
+            rgba($white, 0.9),
+            rgba($white, 0.2),
+            rgba($white, 0.2),
+            rgba($white, 0.9)),
             url('../img/meetings.jpg');
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
         }
 
-        &--headings {
-            //position: absolute;
+        &--headings-bg {
+            width: 40vh;
+            height: 4vh;
+            background-color: rgba($black, 0.2);
         }
     }
 }
