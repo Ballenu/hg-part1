@@ -25,7 +25,8 @@
           
         input[type=checkbox] + label:before {
             content: "";
-            border: 0.1em solid $black;
+            background-color: $events-btn-notChecked;
+            border: 0.2em solid $events-btn-lightNotChecked;
             border-radius: 50em;
             display: inline-block;
             width: 6em;
@@ -43,8 +44,8 @@
         }
           
         input[type=checkbox]:checked + label:before {
-            background-color: $events-btn;
-            border-color: $events-btn;
+            background-color: $events-btn-checked;
+            border-color: $events-btn-checked;
             color: $white;
         }
     }
