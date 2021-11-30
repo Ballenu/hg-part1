@@ -17,10 +17,21 @@ body {
     width: fit-content;
     height: fit-content;
     margin: 0 auto;
-    transform: translate(-9rem ,-2rem);
+    transform: translate(-9.5rem ,-2rem);
 
     font-size: 1.4rem;
     letter-spacing: 1.2rem;
+
+    transition: all 0.2s;
+
+    &--checked {
+        z-index: -1;
+        opacity: 0;
+    }
+
+    &--notChecked {
+        z-index: 1;
+    }
 }
 
 .events__content--headings {
