@@ -11,6 +11,13 @@
         width: 7em;
         height: 7em;
         top: 68%;
+        @include respond(big-desktop) {
+            top: 72%;
+        }
+        @include respond(phone) {
+            top: 65%;
+        }
+
 
         input[type=checkbox] + label {
             display: block;
@@ -61,27 +68,36 @@
         color: transparent;
     }
 
-    &--showcontent:checked ~ .events__content {
-        animation: appearing 1s ease-in;
-        opacity: 1;
-        height: calc(25vh * 4);
-        width: 130vh;
-    }
+    &--showcontent:checked {
 
+        & ~ .events__content {
+            animation: appearing 1s ease-in;
+            opacity: 1;
+            height: calc(25vh * 4);
+            width: 130vh;
+        }
+
+        & ~ .events__heading > .events__heading {
+            /*&--checked {
+                animation: appearing 1s ease-in;
+                height: fit-content;
+                width: fit-content;
+                //z-index: 1;
+            }*/
+
+            &--notChecked {
+                animation: disappearing 1s ease-out;
+                height: 0;
+                width: 0;
+                //z-index: -1;
+            }
+        }
+    }
+    
     &--showcontent:not(:checked) ~ .events__content {
         animation: disappearing 1s ease-out;
         opacity: 0;
         height: 0;
         width: 0;
-    }
-
-    &--showcontent:checked .events__heading--checked {
-        z-index: 1;
-        opacity: 1;
-    }
-
-    &--showcontent:checked .events__heading--notChecked {
-        z-index: -1;
-        opacity: 0;
     }
 }
