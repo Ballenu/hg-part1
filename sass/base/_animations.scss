@@ -1,4 +1,4 @@
-@keyframes closingRectangle {
+@keyframes closingRectangle2 {
     0% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
@@ -10,6 +10,20 @@
     100% {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }   
+}
+
+@keyframes closingRectangle {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    50%{
+        clip-path: polygon(15% 30%, 90% 20%, 90% 65%, 15% 60%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
 }
 
 @keyframes appearing {
