@@ -24,13 +24,7 @@ body {
 
     transition: all 0.2s;
 
-    /*&--checked {
-        //z-index: -1;
-        opacity: 0;
-    }*/
-
     &--notChecked {
-        //z-index: 1;
         opacity: 1;
     }
 }

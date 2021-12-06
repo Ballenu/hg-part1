@@ -5,23 +5,31 @@
     height: fit-content;
     text-align: center;
     transition: all .2s;
-    border-radius: 5rem;
-    box-shadow: 0 1rem 2rem rgba($black, 0.3);
+    border-radius: 5rem;    
     
-    &:hover{
-        animation: closingRectangle 3s ease-in-out;
-    } 
-
     &--hover{
         position: absolute;
         margin: 0 auto;
         width: $default-width;
         height: $default-height;
-        @include respond(phone) {
-            width: 55vh;
-            height: 50vh;
-        }
 
+        @include respond(big-desktop) {
+            width: 160%;
+            height: 180%;
+        }
+        @include respond(tab-port) {
+            width: 140%;
+            height: 160%;
+        }
+        @include respond(tab-land) {
+            width: 120%;
+            height: 140%;
+        }
+        @include respond(phone) {
+            width: 50%;
+            height: 80%;
+        }
+        
         background-image: linear-gradient(360deg,
         rgba($white, 0.7),
         rgba($events-blue, 0.7)),
@@ -31,6 +39,13 @@
         transition: all .2s;
         border-radius: 5rem;
         z-index: 1;
+        
+        &:hover{
+            .events__btn-box{
+                opacity: 0;
+            }
+            animation: closingRectangle 3s ease-in-out;
+        } 
     }
 
     &__content {
@@ -86,6 +101,18 @@
             width: 30vh;
             height: 3vh;
             background-color: rgba($black, 0.3);
+        }
+
+        &--text {
+            @font-face {
+                font-family: "Bellerose";
+                src: "fonts/Bellerose.ttf";
+            }
+            font-family: "Bellerose";
+            font-size: 1.2rem;
+            text-align: left;
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
         }
     }
 }

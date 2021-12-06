@@ -12,10 +12,22 @@
         height: 7em;
         top: 68%;
         @include respond(big-desktop) {
+            width: 10em;
+            height: 10em;
+            top: 80%;
+        }
+        @include respond(tab-port) {
             top: 72%;
         }
+        @include respond(tab-land) {
+            top: 90%;
+            left: 12%;
+        }
         @include respond(phone) {
-            top: 65%;
+            width: 2em;
+            height: 2em;
+            top: 50%;
+            left: -28%;
         }
 
 
