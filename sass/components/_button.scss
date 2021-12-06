@@ -11,23 +11,17 @@
         width: 7em;
         height: 7em;
         top: 68%;
-        @include respond(big-desktop) {
-            width: 10em;
-            height: 10em;
-            top: 80%;
+
+        @include respond(tab-land) {
+            top: 105%;
         }
         @include respond(tab-port) {
-            top: 72%;
-        }
-        @include respond(tab-land) {
-            top: 90%;
-            left: 12%;
+            top: 55%;
+            left: -12%;
         }
         @include respond(phone) {
-            width: 2em;
-            height: 2em;
-            top: 50%;
-            left: -28%;
+            top: 48%;
+            left: -23%;
         }
 
 
@@ -85,24 +79,25 @@
         & ~ .events__content {
             animation: appearing 1s ease-in;
             opacity: 1;
-            height: calc(25vh * 4);
+            height: 100vh;
             width: 130vh;
+
+            @include respond(tab-land) {
+                width: 2000%;
+                height: 1000%;
+            }
+            @include respond(tab-port) {
+                width: 630%;
+                height: 1000%;
+            }
+            @include respond(phone) {
+                width: 500%;
+                height: 800%;
+            }
         }
 
-        & ~ .events__heading > .events__heading {
-            /*&--checked {
-                animation: appearing 1s ease-in;
-                height: fit-content;
-                width: fit-content;
-                //z-index: 1;
-            }*/
-
-            &--notChecked {
-                animation: disappearing 1s ease-out;
-                height: 0;
-                width: 0;
-                //z-index: -1;
-            }
+        & ~ .events__heading > .events__heading--notChecked {
+                display: none;
         }
     }
     

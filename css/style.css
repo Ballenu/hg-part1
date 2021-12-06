@@ -55,7 +55,19 @@ body {
   transform: translate(-9.5rem, -2rem);
   font-size: 1.4rem;
   letter-spacing: 1.2rem;
-  transition: all 0.2s; }
+  transition: all .2s; }
+  @media only screen and (max-width: 75em) {
+    .events__heading {
+      font-size: 1.5rem;
+      transform: translate(-8.7rem, -2rem); } }
+  @media only screen and (max-width: 56.25em) {
+    .events__heading {
+      font-size: 1.2rem;
+      transform: translate(-7.6rem, -2rem); } }
+  @media only screen and (max-width: 37.5em) {
+    .events__heading {
+      font-size: 1.2rem;
+      transform: translate(-7.5rem, -2rem); } }
   .events__heading--notChecked {
     opacity: 1; }
 
@@ -71,6 +83,12 @@ body {
   transform: translateX(-64vh);
   font-size: 1.4rem;
   letter-spacing: 1.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .events__content--headings {
+      transform: translateX(-85%); } }
+  @media only screen and (max-width: 37.5em) {
+    .events__content--headings {
+      transform: translateX(-67%); } }
 
 .events__btn-box {
   position: relative;
@@ -84,24 +102,17 @@ body {
     width: 7em;
     height: 7em;
     top: 68%; }
-    @media only screen and (min-width: 112.5em) {
-      .events__btn-box--btn {
-        width: 10em;
-        height: 10em;
-        top: 80%; } }
-    @media only screen and (max-width: 56.25em) {
-      .events__btn-box--btn {
-        top: 72%; } }
     @media only screen and (max-width: 75em) {
       .events__btn-box--btn {
-        top: 90%;
-        left: 12%; } }
+        top: 105%; } }
+    @media only screen and (max-width: 56.25em) {
+      .events__btn-box--btn {
+        top: 55%;
+        left: -12%; } }
     @media only screen and (max-width: 37.5em) {
       .events__btn-box--btn {
-        width: 2em;
-        height: 2em;
-        top: 50%;
-        left: -28%; } }
+        top: 48%;
+        left: -23%; } }
     .events__btn-box--btn input[type=checkbox] + label {
       display: block;
       margin: 0.3em;
@@ -138,19 +149,22 @@ body {
   .events__btn-box--showcontent:checked ~ .events__content {
     animation: appearing 1s ease-in;
     opacity: 1;
-    height: calc(25vh * 4);
+    height: 100vh;
     width: 130vh; }
-  .events__btn-box--showcontent:checked ~ .events__heading > .events__heading {
-    /*&--checked {
-                animation: appearing 1s ease-in;
-                height: fit-content;
-                width: fit-content;
-                //z-index: 1;
-            }*/ }
-    .events__btn-box--showcontent:checked ~ .events__heading > .events__heading--notChecked {
-      animation: disappearing 1s ease-out;
-      height: 0;
-      width: 0; }
+    @media only screen and (max-width: 75em) {
+      .events__btn-box--showcontent:checked ~ .events__content {
+        width: 2000%;
+        height: 1000%; } }
+    @media only screen and (max-width: 56.25em) {
+      .events__btn-box--showcontent:checked ~ .events__content {
+        width: 630%;
+        height: 1000%; } }
+    @media only screen and (max-width: 37.5em) {
+      .events__btn-box--showcontent:checked ~ .events__content {
+        width: 500%;
+        height: 800%; } }
+  .events__btn-box--showcontent:checked ~ .events__heading > .events__heading--notChecked {
+    display: none; }
   .events__btn-box--showcontent:not(:checked) ~ .events__content {
     animation: disappearing 1s ease-out;
     opacity: 0;
@@ -176,22 +190,21 @@ body {
     transition: all .2s;
     border-radius: 5rem;
     z-index: 1; }
-    @media only screen and (min-width: 112.5em) {
-      .events--hover {
-        width: 160%;
-        height: 180%; } }
-    @media only screen and (max-width: 56.25em) {
-      .events--hover {
-        width: 140%;
-        height: 160%; } }
     @media only screen and (max-width: 75em) {
       .events--hover {
-        width: 120%;
-        height: 140%; } }
+        width: 140%;
+        height: 150%;
+        transform: translateX(-15%); } }
+    @media only screen and (max-width: 56.25em) {
+      .events--hover {
+        width: 75%;
+        height: 90%;
+        transform: translateX(-1%); } }
     @media only screen and (max-width: 37.5em) {
       .events--hover {
-        width: 50%;
-        height: 80%; } }
+        width: 40%;
+        height: 50%;
+        transform: translateX(3%); } }
     .events--hover:hover {
       animation: closingRectangle 3s ease-in-out; }
       .events--hover:hover .events__btn-box {
@@ -204,6 +217,15 @@ body {
     position: relative;
     margin: 0 auto;
     transform: translate(-60vh, 20rem); }
+    @media only screen and (max-width: 75em) {
+      .events__content {
+        transform: translateY(-20%, 20%); } }
+    @media only screen and (max-width: 56.25em) {
+      .events__content {
+        transform: translate(-43%, 20%); } }
+    @media only screen and (max-width: 37.5em) {
+      .events__content {
+        transform: translate(-40%, 15%); } }
     .events__content--gaming {
       margin-bottom: -1.5rem;
       width: 130vh;
@@ -212,6 +234,14 @@ body {
       background-position: right;
       position: relative;
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/gaming.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--gaming {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--gaming {
+          width: 100%;
+          height: 50%; } }
     .events__content--celebrations {
       margin-bottom: -1.5rem;
       width: 130vh;
@@ -220,6 +250,14 @@ body {
       background-position: right;
       position: relative;
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/celebrations.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--celebrations {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--celebrations {
+          width: 100%;
+          height: 50%; } }
     .events__content--wedding {
       margin-bottom: -1.5rem;
       width: 130vh;
@@ -228,6 +266,14 @@ body {
       background-position: right;
       position: relative;
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/wedding.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--wedding {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--wedding {
+          width: 100%;
+          height: 50%; } }
     .events__content--meetings {
       margin-bottom: -1.5rem;
       width: 130vh;
@@ -236,10 +282,27 @@ body {
       background-position: right;
       position: relative;
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.9)), url("../img/meetings.jpg"); }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--meetings {
+          width: 100%;
+          height: 0%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--meetings {
+          width: 100%;
+          height: 50%; } }
     .events__content--headings-bg {
       width: 30vh;
       height: 3vh;
       background-color: rgba(0, 0, 0, 0.3); }
+      @media only screen and (max-width: 75em) {
+        .events__content--headings-bg {
+          width: 35%; } }
+      @media only screen and (max-width: 56.25em) {
+        .events__content--headings-bg {
+          width: 58%; } }
+      @media only screen and (max-width: 37.5em) {
+        .events__content--headings-bg {
+          width: 72%; } }
     .events__content--text {
       font-family: "Bellerose";
       font-size: 1.2rem;
